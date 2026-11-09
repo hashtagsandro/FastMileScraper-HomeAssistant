@@ -1,0 +1,82 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nokia FastMile 4G",
+        "description": "Address of the receiver's web interface. The installer account is optional: it is only needed for the Reboot button.",
+        "data": {
+          "host": "Host",
+          "username": "Installer username (optional)",
+          "password": "Installer password (optional)"
+        },
+        "data_description": {
+          "host": "IP address of the receiver, usually 192.168.0.1.",
+          "username": "Usually fm2-installer. Leave empty if you do not need the Reboot button."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot reach the modem. Check the address and that Home Assistant can route to it.",
+      "invalid_response": "The address answered, but it does not look like a Nokia FastMile status page.",
+      "invalid_auth": "The modem rejected the installer username or password.",
+      "credentials_incomplete": "Enter both username and password, or neither.",
+      "unknown": "Unexpected error, see the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This receiver is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nokia FastMile 4G options",
+        "data": {
+          "scan_interval": "Update interval",
+          "username": "Installer username",
+          "password": "Installer password"
+        },
+        "data_description": {
+          "scan_interval": "Seconds between two reads of the status page.",
+          "username": "Needed for the Reboot button. Leave both fields empty to remove it."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot reach the modem.",
+      "invalid_auth": "The modem rejected the installer username or password.",
+      "credentials_incomplete": "Enter both username and password, or neither."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "rsrp": { "name": "RSRP" },
+      "rssi": { "name": "RSSI" },
+      "rsrq": { "name": "RSRQ" },
+      "sinr": { "name": "SINR" },
+      "primary_band": { "name": "Primary Band" },
+      "ca_bands": { "name": "CA Bands" },
+      "pci": { "name": "PCI" },
+      "earfcn": { "name": "EARFCN" },
+      "frequency": { "name": "Frequency" },
+      "enb": { "name": "eNodeB" },
+      "cell_id": { "name": "Cell ID" },
+      "lte_upload": { "name": "LTE Upload Total" },
+      "lte_download": { "name": "LTE Download Total" },
+      "eth_upload": { "name": "Ethernet Upload Total" },
+      "eth_download": { "name": "Ethernet Download Total" },
+      "wan_ip": { "name": "WAN IP" },
+      "neighbor_cells": { "name": "Neighbor Cells" },
+      "measurement_status": { "name": "Measurement Status" },
+      "lock_status": { "name": "SIM Lock Status" },
+      "imei": { "name": "IMEI" },
+      "imsi": { "name": "IMSI" }
+    },
+    "binary_sensor": {
+      "lte_connected": { "name": "LTE Connected" }
+    },
+    "button": {
+      "measure": { "name": "Measure Cells" },
+      "reboot": { "name": "Reboot" }
+    }
+  }
+}

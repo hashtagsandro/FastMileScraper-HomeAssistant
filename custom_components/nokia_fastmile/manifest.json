@@ -1,0 +1,12 @@
+{
+  "domain": "nokia_fastmile",
+  "name": "Nokia FastMile 4G",
+  "codeowners": ["@YOUR_GITHUB_USER"],
+  "config_flow": true,
+  "documentation": "https://github.com/YOUR_GITHUB_USER/ha-nokia-fastmile",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/YOUR_GITHUB_USER/ha-nokia-fastmile/issues",
+  "requirements": ["beautifulsoup4>=4.12.0"],
+  "version": "0.1.0"
+}
